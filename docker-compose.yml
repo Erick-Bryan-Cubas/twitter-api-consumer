@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: dio
+      MONGO_INITDB_ROOT_PASSWORD: dio
+    
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: dio
+      ME_CONFIG_MONGODB_ADMINPASSWORD: dio
+      ME_CONFIG_MONGODB_URL: mongodb://dio:dio@mongo:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: dio
+      ME_CONFIG_BASICAUTH_PASSWORD: dio
