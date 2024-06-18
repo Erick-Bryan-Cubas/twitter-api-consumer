@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "twitter-api-consumer"
+version = "1.0.0"
+description = "Teste"
+authors = ["Erick Bryan Cubas <thecubas@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+tweepy = "^4.14.0"
+pymongo = "^4.7.3"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
